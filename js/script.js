@@ -37,8 +37,15 @@ const team = [
     },
 
 ]
+
+// Preso la row dall'index e dichiarata rowHtml vuoto per poi inserire il contenuto delle card create
+
 const row = document.querySelector('.row');
+
 let rowHtml = '';
+
+
+// ciclo per creare le card con all'interno i dati forniti dalla array
 
 for (let i = 0 ; i < team.length; i++){
     const teams = team[i];
@@ -49,9 +56,12 @@ for (let i = 0 ; i < team.length; i++){
                 <img class="card-img-top" src="./img/${teams.img}" alt="${teams.img}">
     </div>
     <div class="card-body">
-        <div>${teams.username}</div>
-        <div>${teams.surname}</div>
-        <div>${teams.role}</div>
+        <div>Nome :<h3>${teams.username}</h3>
+        </div>
+        <div>Cognome :<h4>${teams.surname}</h4>
+        </div>
+        <div>Ruolo :<h5>${teams.role}</h5>
+        </div>
      
     </div>
     </div>
@@ -59,7 +69,8 @@ for (let i = 0 ; i < team.length; i++){
     `;
     rowHtml += card;
 }
- console.log(rowHtml)
+
+// inserito da JS a INDEX
 
 row.innerHTML += rowHtml;
 
