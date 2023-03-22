@@ -31,6 +31,30 @@ const team = [
     },
 
 ]
+const row = document.querySelector('.row');
+let rowHtml = '';
 
+for (let i = 0 ; i < team.length; i++){
+    const teams = team[i];
+    let card = `
+    <div class="col">
+    <div class="card">
+        <div class="card-head">
+                <img class="card-img-top" src="./img/${teams.img}" alt="${teams.img}">
+    </div>
+    <div class="card-body">
+        <div>${teams.username}</div>
+        <div>${teams.surname}</div>
+        <div>${teams.role}</div>
+     
+    </div>
+    </div>
+</div>
+    `;
+    rowHtml += card;
+}
+ console.log(rowHtml)
+
+row.innerHtml += rowHtml;
 
 
