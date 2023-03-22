@@ -12,6 +12,12 @@ const team = [
         img: 'angela-caroll-chief-editor.jpg'
     },
     {
+        username : 'Walter',
+        surname: 'Gordon',
+        role: 'Office Manager',
+        img: 'walter-gordon-office-manager.jpg'
+    },
+    {
         username : 'Angela',
         surname: 'Lopez',
         role: 'Social Media Manager',
@@ -37,8 +43,8 @@ let rowHtml = '';
 for (let i = 0 ; i < team.length; i++){
     const teams = team[i];
     let card = `
-    <div class="col">
-    <div class="card">
+    <div class="col-4">
+    <div class="card mt-5">
         <div class="card-head">
                 <img class="card-img-top" src="./img/${teams.img}" alt="${teams.img}">
     </div>
@@ -55,6 +61,6 @@ for (let i = 0 ; i < team.length; i++){
 }
  console.log(rowHtml)
 
-row.innerHtml += rowHtml;
+row.innerHTML += rowHtml;
 
 
