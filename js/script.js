@@ -47,9 +47,8 @@ let rowHtml = '';
 
 // ciclo per creare le card con all'interno i dati forniti dalla array
 
-for (let i = 0 ; i < team.length; i++){
-    const teams = team[i];
-    let card = `
+    team.forEach((teams) => {
+   let card = `
     <div class="col-4">
     <div class="card mt-5">
         <div class="card-head">
@@ -68,7 +67,10 @@ for (let i = 0 ; i < team.length; i++){
 </div>
     `;
     rowHtml += card;
-}
+    } )
+   
+ 
+// }
 
 // inserito da JS a INDEX
 
